@@ -18,10 +18,11 @@ class NowPlayingViewController: UIViewController, UITableViewDataSource {
     
     override func viewDidLoad() {
         super.viewDidLoad()
+        tableView.rowHeight = 234
         
         refreshControl = UIRefreshControl()
         refreshControl.addTarget(self, action: #selector(NowPlayingViewController.didPullToRefresh(_:)), for: .valueChanged)
-        
+        self.navigationItem.title = "Movies"
         tableView.insertSubview(refreshControl, at: 0)
         
         tableView.dataSource = self
@@ -77,5 +78,16 @@ class NowPlayingViewController: UIViewController, UITableViewDataSource {
         
         return cell
     }
+    
+    override func prepare(for segue: UIStoryboardSegue, sender: Any?) {
+        let cell = sender as! UITableViewCell
+        if let indexPath = tableView.indexPath(for: cell) {
+            let movie = movies[indexPath.row]
+        let detailViewController = segue.destination as! DetailViewController
+            detailViewController.movie = movie
+        
+    }
+    
 }
 
+}

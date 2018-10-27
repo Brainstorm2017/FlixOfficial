@@ -16,6 +16,9 @@
 		640E09692149B0F200180B52 /* Flix_DemoTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 640E09682149B0F200180B52 /* Flix_DemoTests.swift */; };
 		640E09742149B0F200180B52 /* Flix_DemoUITests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 640E09732149B0F200180B52 /* Flix_DemoUITests.swift */; };
 		644F9BB4215590E30070A0B4 /* NowPlayingViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 644F9BB3215590E30070A0B4 /* NowPlayingViewController.swift */; };
+		64CCC6B32183A53B00A75161 /* DetailViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 64CCC6B22183A53B00A75161 /* DetailViewController.swift */; };
+		64CCC6B52184011500A75161 /* PosterCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 64CCC6B42184011500A75161 /* PosterCell.swift */; };
+		64CCC6B72184021900A75161 /* SuperheroViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 64CCC6B62184021900A75161 /* SuperheroViewController.swift */; };
 		B991AD97869A8D3FB27A0D15 /* Pods_Flix_DemoUITests.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = BA33ACE1390921DB608C136D /* Pods_Flix_DemoUITests.framework */; };
 		D4DDC63181095720F994D286 /* Pods_Flix_DemoTests.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 684697F32595CAE992558960 /* Pods_Flix_DemoTests.framework */; };
 /* End PBXBuildFile section */
@@ -54,6 +57,9 @@
 		640E09732149B0F200180B52 /* Flix_DemoUITests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Flix_DemoUITests.swift; sourceTree = "<group>"; };
 		640E09752149B0F200180B52 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
 		644F9BB3215590E30070A0B4 /* NowPlayingViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = NowPlayingViewController.swift; sourceTree = "<group>"; };
+		64CCC6B22183A53B00A75161 /* DetailViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DetailViewController.swift; sourceTree = "<group>"; };
+		64CCC6B42184011500A75161 /* PosterCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = PosterCell.swift; sourceTree = "<group>"; };
+		64CCC6B62184021900A75161 /* SuperheroViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SuperheroViewController.swift; sourceTree = "<group>"; };
 		684697F32595CAE992558960 /* Pods_Flix_DemoTests.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_Flix_DemoTests.framework; sourceTree = BUILT_PRODUCTS_DIR; };
 		760EEFADA7C2D3E9DC81D2FA /* Pods-Flix_DemoUITests.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-Flix_DemoUITests.release.xcconfig"; path = "Pods/Target Support Files/Pods-Flix_DemoUITests/Pods-Flix_DemoUITests.release.xcconfig"; sourceTree = "<group>"; };
 		884D6D1394207FBDEA59F603 /* Pods-Flix_DemoTests.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-Flix_DemoTests.release.xcconfig"; path = "Pods/Target Support Files/Pods-Flix_DemoTests/Pods-Flix_DemoTests.release.xcconfig"; sourceTree = "<group>"; };
@@ -139,13 +145,13 @@
 		640E09522149B0F000180B52 /* Flix_Demo */ = {
 			isa = PBXGroup;
 			children = (
-				644F9BB3215590E30070A0B4 /* NowPlayingViewController.swift */,
+				64CCC6B12183A4B200A75161 /* Views */,
+				64CCC6B02183A48800A75161 /* ViewControllers */,
 				640E09532149B0F000180B52 /* AppDelegate.swift */,
 				640E09572149B0F000180B52 /* Main.storyboard */,
 				640E095A2149B0F100180B52 /* Assets.xcassets */,
 				640E095C2149B0F100180B52 /* LaunchScreen.storyboard */,
 				640E095F2149B0F100180B52 /* Info.plist */,
-				640CDE19217139F700803DA4 /* MovieCell.swift */,
 			);
 			path = Flix_Demo;
 			sourceTree = "<group>";
@@ -166,6 +172,25 @@
 				640E09752149B0F200180B52 /* Info.plist */,
 			);
 			path = Flix_DemoUITests;
+			sourceTree = "<group>";
+		};
+		64CCC6B02183A48800A75161 /* ViewControllers */ = {
+			isa = PBXGroup;
+			children = (
+				644F9BB3215590E30070A0B4 /* NowPlayingViewController.swift */,
+				64CCC6B22183A53B00A75161 /* DetailViewController.swift */,
+				64CCC6B62184021900A75161 /* SuperheroViewController.swift */,
+			);
+			path = ViewControllers;
+			sourceTree = "<group>";
+		};
+		64CCC6B12183A4B200A75161 /* Views */ = {
+			isa = PBXGroup;
+			children = (
+				640CDE19217139F700803DA4 /* MovieCell.swift */,
+				64CCC6B42184011500A75161 /* PosterCell.swift */,
+			);
+			path = Views;
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
@@ -397,8 +422,11 @@
 			buildActionMask = 2147483647;
 			files = (
 				644F9BB4215590E30070A0B4 /* NowPlayingViewController.swift in Sources */,
+				64CCC6B52184011500A75161 /* PosterCell.swift in Sources */,
+				64CCC6B72184021900A75161 /* SuperheroViewController.swift in Sources */,
 				640E09542149B0F000180B52 /* AppDelegate.swift in Sources */,
 				640CDE1A217139F700803DA4 /* MovieCell.swift in Sources */,
+				64CCC6B32183A53B00A75161 /* DetailViewController.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
