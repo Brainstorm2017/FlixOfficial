@@ -18,10 +18,10 @@
                         <rect key="frame" x="0.0" y="0.0" width="375" height="667"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <subviews>
-                            <tableView clipsSubviews="YES" contentMode="scaleToFill" fixedFrame="YES" alwaysBounceVertical="YES" dataMode="prototypes" style="plain" separatorStyle="default" rowHeight="-1" estimatedRowHeight="-1" sectionHeaderHeight="28" sectionFooterHeight="28" translatesAutoresizingMaskIntoConstraints="NO" id="H2Z-yP-hJh">
+                            <tableView clipsSubviews="YES" contentMode="scaleToFill" alwaysBounceVertical="YES" dataMode="prototypes" style="plain" separatorStyle="default" rowHeight="-1" estimatedRowHeight="-1" sectionHeaderHeight="28" sectionFooterHeight="28" translatesAutoresizingMaskIntoConstraints="NO" id="H2Z-yP-hJh">
                                 <rect key="frame" x="0.0" y="0.0" width="375" height="667"/>
-                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
                                 <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                                <color key="sectionIndexBackgroundColor" red="0.47562221336208432" green="1" blue="0.30477108225662219" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
                                 <prototypes>
                                     <tableViewCell clipsSubviews="YES" contentMode="scaleToFill" preservesSuperviewLayoutMargins="YES" selectionStyle="default" indentationWidth="10" reuseIdentifier="MovieCell" rowHeight="234" id="RQM-x8-Sau" customClass="MovieCell" customModule="Flix_Demo" customModuleProvider="target">
                                         <rect key="frame" x="0.0" y="28" width="375" height="234"/>
@@ -30,13 +30,17 @@
                                             <rect key="frame" x="0.0" y="0.0" width="375" height="233.5"/>
                                             <autoresizingMask key="autoresizingMask"/>
                                             <subviews>
-                                                <imageView userInteractionEnabled="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" translatesAutoresizingMaskIntoConstraints="NO" id="T7z-2E-t4u">
+                                                <imageView userInteractionEnabled="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" translatesAutoresizingMaskIntoConstraints="NO" id="T7z-2E-t4u">
                                                     <rect key="frame" x="0.0" y="11" width="120" height="212"/>
-                                                    <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                                                    <constraints>
+                                                        <constraint firstAttribute="width" constant="120" id="elB-1W-Goh"/>
+                                                        <constraint firstAttribute="height" constant="212" id="hcm-x2-EWD"/>
+                                                    </constraints>
                                                 </imageView>
                                                 <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" text="Wonder Woman" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="LvD-Cw-J97">
                                                     <rect key="frame" x="128" y="0.0" width="247" height="21"/>
                                                     <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                                                    <color key="backgroundColor" red="1" green="0.83630381853861224" blue="0.7530676008376026" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
                                                     <fontDescription key="fontDescription" type="boldSystem" pointSize="22"/>
                                                     <nil key="textColor"/>
                                                     <nil key="highlightedColor"/>
@@ -49,6 +53,14 @@
                                                     <nil key="highlightedColor"/>
                                                 </label>
                                             </subviews>
+                                            <constraints>
+                                                <constraint firstItem="T7z-2E-t4u" firstAttribute="top" secondItem="JPO-N1-mOE" secondAttribute="top" constant="11" id="G5A-tB-lqA"/>
+                                                <constraint firstItem="T7z-2E-t4u" firstAttribute="leading" secondItem="JPO-N1-mOE" secondAttribute="leading" id="Oux-N1-vqX"/>
+                                                <constraint firstAttribute="bottom" secondItem="T7z-2E-t4u" secondAttribute="bottom" constant="10.5" id="fjr-5j-V3q"/>
+                                                <constraint firstItem="T7z-2E-t4u" firstAttribute="leading" secondItem="JPO-N1-mOE" secondAttribute="leading" id="iI1-bz-U1e"/>
+                                                <constraint firstItem="T7z-2E-t4u" firstAttribute="top" secondItem="JPO-N1-mOE" secondAttribute="top" constant="11" id="rwF-kq-NGI"/>
+                                                <constraint firstAttribute="bottom" secondItem="T7z-2E-t4u" secondAttribute="bottom" constant="10.5" id="sAm-rV-HgI"/>
+                                            </constraints>
                                         </tableViewCellContentView>
                                         <connections>
                                             <outlet property="overviewLabel" destination="oGg-LD-Jgt" id="arv-8r-jiX"/>
@@ -61,6 +73,12 @@
                             </tableView>
                         </subviews>
                         <color key="backgroundColor" red="1" green="1" blue="1" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                        <constraints>
+                            <constraint firstItem="H2Z-yP-hJh" firstAttribute="top" secondItem="8bC-Xf-vdC" secondAttribute="top" id="Bib-Po-Z0w"/>
+                            <constraint firstAttribute="bottom" secondItem="H2Z-yP-hJh" secondAttribute="bottom" id="ThZ-f6-3Ro"/>
+                            <constraint firstItem="H2Z-yP-hJh" firstAttribute="leading" secondItem="6Tk-OE-BBY" secondAttribute="leading" id="x5A-gk-qPY"/>
+                            <constraint firstItem="H2Z-yP-hJh" firstAttribute="trailing" secondItem="6Tk-OE-BBY" secondAttribute="trailing" id="ypt-Bs-fnb"/>
+                        </constraints>
                         <viewLayoutGuide key="safeArea" id="6Tk-OE-BBY"/>
                     </view>
                     <navigationItem key="navigationItem" id="FVK-1Q-unX"/>
