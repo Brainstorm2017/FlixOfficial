@@ -21,7 +21,7 @@
                             <tableView clipsSubviews="YES" contentMode="scaleToFill" alwaysBounceVertical="YES" dataMode="prototypes" style="plain" separatorStyle="default" rowHeight="-1" estimatedRowHeight="-1" sectionHeaderHeight="28" sectionFooterHeight="28" translatesAutoresizingMaskIntoConstraints="NO" id="H2Z-yP-hJh">
                                 <rect key="frame" x="0.0" y="0.0" width="375" height="667"/>
                                 <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
-                                <color key="sectionIndexBackgroundColor" red="0.47562221336208432" green="1" blue="0.30477108225662219" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                                <color key="sectionIndexBackgroundColor" red="1" green="0.83630381850000002" blue="0.75306760080000001" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
                                 <prototypes>
                                     <tableViewCell clipsSubviews="YES" contentMode="scaleToFill" preservesSuperviewLayoutMargins="YES" selectionStyle="default" indentationWidth="10" reuseIdentifier="MovieCell" rowHeight="234" id="RQM-x8-Sau" customClass="MovieCell" customModule="Flix_Demo" customModuleProvider="target">
                                         <rect key="frame" x="0.0" y="28" width="375" height="234"/>
@@ -37,29 +37,40 @@
                                                         <constraint firstAttribute="height" constant="212" id="hcm-x2-EWD"/>
                                                     </constraints>
                                                 </imageView>
-                                                <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" text="Wonder Woman" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="LvD-Cw-J97">
-                                                    <rect key="frame" x="128" y="0.0" width="247" height="21"/>
-                                                    <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                                                <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" ambiguous="YES" text="Wonder Woman" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="LvD-Cw-J97">
+                                                    <rect key="frame" x="128" y="133.5" width="224" height="26.5"/>
                                                     <color key="backgroundColor" red="1" green="0.83630381853861224" blue="0.7530676008376026" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
                                                     <fontDescription key="fontDescription" type="boldSystem" pointSize="22"/>
                                                     <nil key="textColor"/>
                                                     <nil key="highlightedColor"/>
                                                 </label>
-                                                <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" text="An Amazon Princess comes to the world of man to become the greatest female hero" textAlignment="natural" lineBreakMode="tailTruncation" numberOfLines="0" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="oGg-LD-Jgt">
-                                                    <rect key="frame" x="128" y="48" width="247" height="116"/>
-                                                    <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                                                <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" ambiguous="YES" text="An Amazon Princess comes to the world of man to become the greatest female hero" textAlignment="natural" lineBreakMode="tailTruncation" numberOfLines="0" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="oGg-LD-Jgt">
+                                                    <rect key="frame" x="128" y="168" width="239" height="57.5"/>
+                                                    <color key="backgroundColor" red="0.47562221339999999" green="1" blue="0.3047710823" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
                                                     <fontDescription key="fontDescription" type="system" weight="thin" pointSize="16"/>
                                                     <nil key="textColor"/>
                                                     <nil key="highlightedColor"/>
                                                 </label>
                                             </subviews>
+                                            <color key="backgroundColor" red="0.88953677317847868" green="1" blue="0.2548990063224329" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
                                             <constraints>
+                                                <constraint firstAttribute="bottom" secondItem="oGg-LD-Jgt" secondAttribute="bottom" constant="8" id="Bsn-Pp-Tcl"/>
+                                                <constraint firstAttribute="trailing" secondItem="oGg-LD-Jgt" secondAttribute="trailing" constant="8" id="EfF-By-3E1"/>
                                                 <constraint firstItem="T7z-2E-t4u" firstAttribute="top" secondItem="JPO-N1-mOE" secondAttribute="top" constant="11" id="G5A-tB-lqA"/>
+                                                <constraint firstItem="LvD-Cw-J97" firstAttribute="top" secondItem="JPO-N1-mOE" secondAttribute="topMargin" constant="8" id="HcP-J2-7ps"/>
+                                                <constraint firstAttribute="trailingMargin" secondItem="LvD-Cw-J97" secondAttribute="trailing" constant="8" id="Koh-Yq-myy"/>
+                                                <constraint firstItem="oGg-LD-Jgt" firstAttribute="top" secondItem="LvD-Cw-J97" secondAttribute="bottom" constant="8" id="LaW-gw-FED"/>
+                                                <constraint firstAttribute="bottom" secondItem="T7z-2E-t4u" secondAttribute="bottom" constant="8" id="O66-aZ-7Jc"/>
                                                 <constraint firstItem="T7z-2E-t4u" firstAttribute="leading" secondItem="JPO-N1-mOE" secondAttribute="leading" id="Oux-N1-vqX"/>
+                                                <constraint firstItem="T7z-2E-t4u" firstAttribute="leading" secondItem="JPO-N1-mOE" secondAttribute="leading" constant="8" id="S3k-lR-nNJ"/>
+                                                <constraint firstItem="T7z-2E-t4u" firstAttribute="top" secondItem="JPO-N1-mOE" secondAttribute="top" constant="8" id="dsh-Fi-LeJ"/>
                                                 <constraint firstAttribute="bottom" secondItem="T7z-2E-t4u" secondAttribute="bottom" constant="10.5" id="fjr-5j-V3q"/>
                                                 <constraint firstItem="T7z-2E-t4u" firstAttribute="leading" secondItem="JPO-N1-mOE" secondAttribute="leading" id="iI1-bz-U1e"/>
+                                                <constraint firstItem="oGg-LD-Jgt" firstAttribute="leading" secondItem="T7z-2E-t4u" secondAttribute="trailing" constant="8" id="nGC-FN-gKd"/>
+                                                <constraint firstItem="oGg-LD-Jgt" firstAttribute="top" secondItem="LvD-Cw-J97" secondAttribute="bottom" constant="8" id="oUl-qw-9h8"/>
                                                 <constraint firstItem="T7z-2E-t4u" firstAttribute="top" secondItem="JPO-N1-mOE" secondAttribute="top" constant="11" id="rwF-kq-NGI"/>
                                                 <constraint firstAttribute="bottom" secondItem="T7z-2E-t4u" secondAttribute="bottom" constant="10.5" id="sAm-rV-HgI"/>
+                                                <constraint firstItem="LvD-Cw-J97" firstAttribute="leading" secondItem="T7z-2E-t4u" secondAttribute="trailing" constant="8" id="x8a-pi-ocf"/>
                                             </constraints>
                                         </tableViewCellContentView>
                                         <connections>
